@@ -1,0 +1,62 @@
+<ion-header>
+  
+  <ion-row class="ion-align-items-center header-line white">
+    <ion-col size="25">
+      Comidinhas da julia&duardo
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-align-items-center header-subline">
+    <ion-slides pager="false" class="slide-line" [options]="slideOpts">
+      <ion-slide *ngFor="let categoria of categorias; let ix = index" [ngClass]="categoria.codigo == selected ? 'slide-actived' : 'slide-no-actived'" (click)="setSelected(categoria.codigo)">
+        {{ categoria.nome }}
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col size="6" *ngFor="let produto of produtos; let ix = index" [hidden]="!produto.visibled" (click)="goProduto(produto)">
+      <ion-row>
+        <ion-col size="12" class="card-produto">
+          
+          <ion-row>
+            <ion-col size="12" class="img-produto">
+              <img [src]="pathImgs + produto.imagens[0]"/>
+            </ion-col>
+          </ion-row>
+
+          <ion-row style="height: 45px;">
+            <ion-col size="12" class="titulo-produto">
+              {{produto.nome}}
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="12" class="valor-produto">
+              {{ formataValor(produto.valor) }}
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="12" class="col-botao-ver-mais">
+              <span class="botao-ver-mais"> Ver mais </span>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="btn-order">
+    <ion-fab-button>
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+</ion-footer>

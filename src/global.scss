@@ -1,0 +1,35 @@
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.header-line {
+    background-color: var(--principal);
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(194,194,194,1);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(194,194,194,1);
+    box-shadow: 0px 2px 3px 0px rgba(194,194,194,1);
+}
+
+.header-subline {
+    background-color: var(--secundaria);
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(194,194,194,1);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(194,194,194,1);
+    box-shadow: 0px 2px 3px 0px rgba(194,194,194,1);
+}
+
+.slide-line {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+

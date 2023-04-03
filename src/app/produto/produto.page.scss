@@ -1,0 +1,28 @@
+.descricao-produto{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.valor-produto{
+    color: #271f1f;
+    font-size: 24px;
+    text-align: center;
+}
+
+.footer-produto{
+    background-color: #ccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.inp-quantidade{
+    color: #020101;
+    text-align: center;
+    background-color: var(--white-smoke);
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+}
